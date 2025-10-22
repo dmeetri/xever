@@ -1,3 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
+
+:root {
+  --color-black: #0d0f0f;
+  --color-gray: #181919;
+  --color-green: #3bf7b8;
+  --color-light-gray: #c4d0cc;
+  --color-white: #dfe6e4;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,4 +19,16 @@
 a {
   text-decoration: none;
   color: inherit;
+}
+
+body {
+  background-color: var(--color-gray);
+  font-family: "Onest", sans-serif;
+  font-size: 22px;
+  color: var(--color-light-gray);
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
 }
