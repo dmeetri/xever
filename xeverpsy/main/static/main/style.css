@@ -28,6 +28,15 @@ body {
   color: var(--color-light-gray);
 }
 
+h1 {
+  font-size: 100px;
+  color: var(--color-white);
+}
+h2 {
+  font-size: 48px;
+  color: var(--color-white);
+}
+
 .container {
   width: 1440px;
   margin: 0 auto;
