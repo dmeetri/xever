@@ -37,19 +37,64 @@ h2 {
   color: var(--color-white);
 }
 
+button {
+  background: none;
+  cursor: pointer;
+}
+
 .container {
-  width: 1440px;
+  max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 37px;
 }
 
 /* HEADER */
 
 header {
   width: 100%;
+  margin-top: 25px;
 }
 .header-content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  font-size: 18px;
+  font-weight: 300;
+  margin-right: 22px;
+}
+nav a:last-child {
+  margin-right: 0;
+}
+nav a:hover {
+  color: var(--color-green);
+}
+
+.burger-menu {
+  display: none;
 }
 
 /* FOOTER */
+
+footer {
+  background-color: var(--color-black);
+  padding: 45px 0;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  font-size: 135px;
+  font-weight: 700;
+  line-height: 90%;
+  color: var(--color-green);
+  margin-right: 120px;
+}
+
+.footer-nav {
+}
