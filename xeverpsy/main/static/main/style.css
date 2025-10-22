@@ -25,7 +25,7 @@ body {
   background-color: var(--color-gray);
   font-family: "Onest", sans-serif;
   font-size: 22px;
-  color: var(--color-light-gray);
+  color: var(--color-white);
 }
 
 h1 {
@@ -61,20 +61,48 @@ header {
   align-items: center;
 }
 
-nav a {
+.header-nav a {
   font-size: 18px;
   font-weight: 300;
   margin-right: 22px;
 }
-nav a:last-child {
+.header-nav a:last-child {
   margin-right: 0;
 }
-nav a:hover {
+.header-nav a:hover {
   color: var(--color-green);
 }
 
+.header-burger {
+  position: relative;
+}
 .burger-menu {
   display: none;
+}
+.burger-nav {
+  position: absolute;
+  left: -200px;
+  background-color: var(--color-black);
+  padding: 30px;
+}
+.burger-nav-active {
+  display: none;
+}
+
+.b-nav {
+  list-style: none;
+  color: var(--color-white);
+}
+.b-nav li {
+  font-size: 18px;
+  font-weight: 300;
+  margin-right: 22px;
+}
+.b-nav li:last-child {
+  margin-right: 0;
+}
+.b-nav li:hover {
+  color: var(--color-green);
 }
 
 /* FOOTER */
@@ -82,6 +110,7 @@ nav a:hover {
 footer {
   background-color: var(--color-black);
   padding: 45px 0;
+  margin-top: 200px;
 }
 .footer-content {
   display: flex;
@@ -96,5 +125,40 @@ footer {
   margin-right: 120px;
 }
 
-.footer-nav {
+.footer-nav .f-nav-btns:first-child {
+  margin-top: 55px;
+  margin-bottom: 45px;
+}
+
+.f-nav-btns p {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--color-white);
+  margin-bottom: 10px;
+}
+.f-nav {
+  display: flex;
+}
+.f-nav a {
+  margin-right: 30px;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--color-light-gray);
+}
+.f-nav a:last-child {
+  margin-right: 0;
+}
+.f-nav a:hover {
+  color: var(--color-green);
+}
+
+/* MEDIA */
+
+@media (max-width: 900px) {
+  .header-nav {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+  }
 }
