@@ -1,10 +1,24 @@
-{% extends 'main/base.html' %}
-{% load static %}
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'main/works.css' %}">
-{% endblock %}
-{% block title%}xeVer{% endblock %}
+{% extends 'main/base.html' %} {% load static %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'main/works.css' %}" />
+{% endblock %} 
+{% block title%}xeVer{% endblock %} 
 
 {% block content %}
+
+<div class="container">
+  <div class="works-content">
+    <h1>РАБОТЫ</h1>
+    <div class="cards-works">
+      <div class="card-work">
+        <p>{{ video.title }}</p>
+        <div class="video-player">
+          <video controls width="800">
+            <source src="{{ video.video_file.url }}" />
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
