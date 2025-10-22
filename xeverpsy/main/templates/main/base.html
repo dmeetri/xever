@@ -8,18 +8,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{% static 'main/style.css' %}">
   {% block extra_css %}{% endblock %}
-  <title>xeVer</title>
+  <title>{% block title%}xeVer{% endblock %}</title>
 </head>
 
 <body>
-  <header></header>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <img src="{% static 'main/images/logo.svg' %}">
 
-  <h1>Hadilef</h1>
+        <nav>
+          <a href="#">ГЛАВНАЯ</a>
+          <a href="#">УСЛУГИ</a>
+          <a href="#">ОБО МНЕ</a>
+          <a href="#">КОНТАКТЫ</a>
+          <a href="#">РАБОТЫ</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-  {% block content %}
-  {% endblock %}
+  {% block content %}{% endblock %}
 
-  <footer></footer>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
