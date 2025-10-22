@@ -17,7 +17,7 @@
       <div class="header-content">
         <img src="{% static 'main/images/logo.svg' %}">
 
-        <nav>
+        <nav class="header-nav">
           <a href="#">ГЛАВНАЯ</a>
           <a href="#">УСЛУГИ</a>
           <a href="#">ОБО МНЕ</a>
@@ -25,9 +25,21 @@
           <a href="#">РАБОТЫ</a>
         </nav>
 
-        <button class="burger-menu" onclick="showBurgerMenu()">
-          <img src="{% static 'main/images/burger.svg' %}">
-        </button>
+        <div class="header-burger">
+          <button class="burger-menu" onclick="showBurgerMenu()">
+            <img src="{% static 'main/images/burger.svg' %}">
+          </button>
+
+          <div class="burger-nav burger-nav-active" id="burger">
+            <ul class="b-nav">
+              <li><a href="#">ГЛАВНАЯ</a></li>
+              <li><a href="#">УСЛУГИ</a></li>
+              <li><a href="#">ОБО МНЕ</a></li>
+              <li><a href="#">КОНТАКТЫ</a></li>
+              <li><a href="#">РАБОТЫ</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -72,9 +84,10 @@
   </footer>
 
   <script>
-    // Показывать и скрывать бургер меню
-    function showBurgerMenu() {
+    var burger = document.getElementById('burger');
 
+    function showBurgerMenu() {
+      burger.classList.toggle('burger-nav-active');
     }
   </script>
 </body>
