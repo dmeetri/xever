@@ -13,7 +13,7 @@ class PortfolioAdmin(admin.ModelAdmin):
 class ServicesAdmin(admin.ModelAdmin):
     list_display = ('title', 'preview')
     search_fields = ("title", "description")
-    list_filter = ("title", 'upload_at')
+    list_filter = ("title",)
     list_per_page = 50
     ordering = ("-id",)
     list_display_links = ('title', 'preview')
