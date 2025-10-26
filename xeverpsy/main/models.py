@@ -1,10 +1,18 @@
 from django.db import models
 
 class Portfolio(models.Model):
-    title = models.TextField()
-    description = models.TextField()
-    video = models.FileField(upload_to='video/') #file in data base
+    title = models.TextField(null=False)
+    description = models.TextField(null=False)
+    video = models.FileField(upload_to='video/', null=False)
     upload_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self) -> str:
+        return self.title
+
+class Services(models.Model):
+    title = models.TextField(null=False)
+    description = models.TextField(null=False)
+    preview = models.ImageField(upload_to='services/', blank=True, null=False)
 
     def __str__(self) -> str:
         return self.title
