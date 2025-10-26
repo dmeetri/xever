@@ -1,9 +1,14 @@
 from django.db import models
+from django.core.validators import FileExtensionValidator
 
 class Portfolio(models.Model):
     title = models.TextField(null=False)
     description = models.TextField(null=False)
-    video = models.FileField(upload_to='video/', null=False)
+    video = models.FileField(
+        upload_to='video/',
+        null=False,
+        validators=[FileExtensionValidator(allowed_extensions=['mp4', 'avi', 'mov'])]
+        )
     upload_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self) -> str:
